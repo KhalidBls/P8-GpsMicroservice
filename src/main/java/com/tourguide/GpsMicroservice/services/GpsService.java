@@ -11,7 +11,7 @@ import java.util.UUID;
 @Service
 public class GpsService {
 
-    GpsUtil gpsUtil = new GpsUtil();
+    private GpsUtil gpsUtil = new GpsUtil();
 
     public VisitedLocation getLocation(UUID userId) {
         return gpsUtil.getUserLocation(userId);

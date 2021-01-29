@@ -18,13 +18,14 @@ public class GpsController {
     GpsService gpsService;
 
     @GetMapping("/getLocation")
-    public VisitedLocation getLocation(@RequestParam String userId){
-        return gpsService.getLocation(UUID.fromString(userId));
+    public VisitedLocation getLocation(@RequestParam UUID userId){
+        return gpsService.getLocation(userId);
     }
 
     @GetMapping("/getAttractions")
     public List<Attraction> getAttractions(){
         return gpsService.getAttractions();
     }
+
 
 }
