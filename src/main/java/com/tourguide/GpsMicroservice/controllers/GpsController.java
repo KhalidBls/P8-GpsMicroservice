@@ -18,12 +18,12 @@ public class GpsController {
     @Autowired
     GpsService gpsService;
 
-    @GetMapping("/getLocation")
+    @GetMapping(value="/getLocation",produces = MediaType.APPLICATION_JSON_VALUE)
     public VisitedLocation getLocation(@RequestParam UUID userId){
         return gpsService.getLocation(userId);
     }
 
-    @GetMapping( "/getAttractions")
+    @GetMapping( value="/getAttractions",produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Attraction> getAttractions(){
         return gpsService.getAttractions();
     }
