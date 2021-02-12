@@ -19,7 +19,7 @@ public class GpsController {
     GpsService gpsService;
 
     @GetMapping(value="/getLocation",produces = MediaType.APPLICATION_JSON_VALUE)
-    public VisitedLocation getLocation(@RequestParam UUID userId){
+    public VisitedLocation getLocation(@RequestParam UUID userId) {
         return gpsService.getLocation(userId);
     }
 
